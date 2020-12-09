@@ -18,8 +18,23 @@
     </style>
 </head>
 <body>
-    <div id="area">
+    <div id="area" onclick="clicar()" onmouseenter="entrar()" onmouseout="sair()"> <!--Faz os chamados aos métodos de clicar, entrar e sair-->
         Interaja...
     </div>
+
+    <script>
+        function clicar (){ //adicionando função ao método de clicar
+            var a = window.document.getElementById('area') // função realizada
+            a.innerText = 'Clicou!'
+        }
+        function entrar(){ //adicionando função ao método de entrar do mouse
+            var a = window.document.getElementById('area') // função realizada
+            a.innerText = 'Entrou!'
+        }
+        function sair(){
+            var a = window.document.getElementById('area') // função realizada
+            a.innerText = 'Saiu!'
+        }
+    </script>
 </body>
 </html>
