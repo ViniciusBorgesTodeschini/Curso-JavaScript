@@ -12,22 +12,39 @@
         div#res {
             margin-top: 20px;
         }
+        input#botao{
+            width: 100px;
+            height: 50px;
+            
+        }
     </style>
 </head>
 <body>
     <h1>Nacionalidade - Condicionais Compostas</h1>
-    País de Nascimento: <input type="text" name="txtpais" id="txtpais">
-    <input type="button" value="Confirmar" onclick="atribuir()">
+    <p>Digite <strong>[1]</strong> se o seu país for <strong>Brasil.</strong></p>
+    <p>Digite <strong>[2]</strong> se o seu país for <strong>Outro.</strong></p>
+    Opção:<input type="number" name="npais" id="npais">
+    <p></p>
+    <!--Escreva o nome do seu país: <input type="text" name="txtpais" id="txtpais"> DESATIVADO-->
+    <p></p>
+    <input id="botao" type="button" value="Confirmar" onclick="atribuir()">
     <div id = "res"></div>
     <script>
         function atribuir(){
-            var pais = window.document.getElementById('txtpais')
+            var npais = window.document.getElementById('npais')
+            //var pais = window.document.getElementById('txtpais') DESATIVADO
             var res = window.document.querySelector('div#res')
-            res.innerHTML = `Se você nasceu em no(a) <strong>${pais}</strong>.`
-            if (pais == 'Brasil'){
-                res.innerHTML +=  `Sua nacionalidade é <strong>Brasileira</strong>`
+            var n = Number (npais.value)
+            if (n == 1){
+                var p = 'Brasil'
+                res.innerHTML = `Se você nasceu no(a) ` + p + `.`
+                res.innerHTML += ` Sua nacionalidade é <strong>Brasileira</strong>`
+            } else if(n == 2) {
+                var p = 'outro país'
+                res.innerHTML = `Se você nasceu em ` + p + `.`
+                res.innerHTML += ` Sua nacionalidade é <strong>Estrangeira</strong>.`
             } else {
-                res.innerHTML += `Sua nacionalidade é <strong>Estrangeira</strong>.`
+                res.innerHTML = `<strong>Valor inválido! Verifique as opções novamente.</strong>`
             }
         }
     </script>
