@@ -16,17 +16,18 @@
 </head>
 <body>
     <h1>Nacionalidade - Condicionais Compostas</h1>
-    País de Nascimento:<input type="text" name="txtpais" id="txtpais">
-    <input type="button" value="Confirmar" onclick = "atribuir()">
+    País de Nascimento: <input type="text" name="txtpais" id="txtpais">
+    <input type="button" value="Confirmar" onclick="atribuir()">
     <div id = "res"></div>
     <script>
         function atribuir(){
-            var pais = window.document.querySelector('input#txtpais')
+            var pais = window.document.getElementById('txtpais')
             var res = window.document.querySelector('div#res')
+            res.innerHTML = `Se você nasceu em no(a) <strong>${pais}</strong>.`
             if (pais == 'Brasil'){
-                res.innerHTML = `Se você nasceu em no(a) <strong>${pais}</strong> sua nacionalidade é <strong>Brasileira</strong>`
+                res.innerHTML +=  `Sua nacionalidade é <strong>Brasileira</strong>`
             } else {
-                res.innerHTML = `Se você nasceu no(a) <strong>${pais}</strong>  sua nacionalidade é <strong>Estrangeira</strong>.`
+                res.innerHTML += `Sua nacionalidade é <strong>Estrangeira</strong>.`
             }
         }
     </script>
