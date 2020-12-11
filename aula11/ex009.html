@@ -1,11 +1,34 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>País de Origem - Condicional Composta</title>
+    <style>
+        body {
+            background-color: rgb(184, 129, 235);
+            font: normal 15px Arial;
+        }
+        div#res {
+            margin-top: 20px;
+        }
+    </style>
 </head>
 <body>
-    
+    <h1>Nacionalidade - Condicionais Compostas</h1>
+    País de Nascimento:<input type="text" name="txtPais" id="txtpais">
+    <input type="button" value="Confirmar" onclick = "atribuir()">
+    <div id = "res"></div>
+    <script>
+        function atribuir(){
+            var pais = window.document.querySelector('input#txtpais')
+            var res = window.document.querySelector('div#res')
+            if (pais == 'Brasil'){
+                res.innerHTML = `Se você nasceu em <strong>${pais}</strong> sua nacionalidade é <strong>Brasileira</strong>`
+            } else {
+                res.innerHTML = `Se você nasceu em <strong>${pais}</strong> sua nacionalidade é <strong>Estrangeira</strong>.`
+            }
+        }
+    </script>
 </body>
 </html>
