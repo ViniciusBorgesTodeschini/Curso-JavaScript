@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificador de idade</title>
+    <style>
+        body{
+            background-color: rgb(0, 119, 255);
+            color: white;
+            font: normal 20px Arial;
+            text-align: center;
+        }
+        div#area{
+            background-color: white;
+            width: 600px;
+            height: 500px;
+            text-align: left;
+            color: black;
+            margin-left: 120px;
+        }
+        input#txtano {
+            margin-top: 20px;
+        }
+        div#txt{
+            margin-left: 20px;
+        }
+        div#res {
+            margin-top: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Verificador de idade</h1>
+    <div id = "area">
+        <div id="txt">
+            Ano de Nascimento: <input type="number" name="txtano" id="txtano">
+            <p></p>
+            Sexo: <input type="checkbox" name="txtM" id="txtM"> Masculino
+            <input type="checkbox" name="txtF" id="txtF"> Feminino
+            <p></p>
+            <input id="botao" type="button" value="Verificar" onclick="verificar()">
+            <div id = "res"></div>
+        </div>
+    </div>
+    @Vinibtodeschini
+    <script>
+        function verificar(){
+        var res = window.document.querySelector('div#res')
+        var female = window.document.querySelector('input#txtF')
+        var male = window.document.querySelector('input#txtM')
+        var numero = window.document.querySelector('input#txtano')
+        var ano = Number(numero.value)
+        var idade = 2020 - ano
+        res.innerHTML = idade
+        }
+    </script>
+</body>
+</html>
