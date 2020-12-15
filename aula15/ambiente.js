@@ -7,13 +7,14 @@ console.log(`Nosso vetor é o ${num}`)
 console.log(`Sendo asism o primeiro valor do vetor é ${num[0]}`)*/
 
 console.log(`Mostrando o vetor de ${num.length} posições: `)
-/*
-Minha tentativa
-for (num == 0; num.length; num++) {
-    console.log(`${num}; `)
-}*/
 
-//Recomandação do Guanabara
+/* PRIMEIRA FORMA
+Recomandação do Guanabara
 for (let pos = 0; pos < num.length; pos++){
     console.log(`A posição ${pos} tem o valor ${num[pos]}`)
+} */
+
+//SEGUNDA FORMA
+for (let pos in num){
+    console.log(`A posição ${pos} temm o valor ${num[pos]}`)
 }
