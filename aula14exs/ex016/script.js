@@ -6,6 +6,7 @@ function contar() {
 
     if (ini.value.lenght == 0 || fim.value.lenght == 0 || passo.value.lenght == 0){
         window.alert('[ERRO] Faltam dados! Preencha todos os campos corretamente.')
+        res.innerHTML = 'Impossível contar!'
     } else {
        res.innerHTML = 'Contando: '
        let i = Number(ini.value) 
