@@ -1,4 +1,4 @@
-function parimpar(n){
+function parimpar(n){ //Parâmetro formal
     if (n%2 == 0){
         return 'Par!'
     } else {
@@ -6,6 +6,6 @@ function parimpar(n){
     }
 } 
 
-let res = parimpar(4)
+let res = parimpar(4) //Parâmetro real
 console.log(res)
 // OU console.log(parimpar(4))
