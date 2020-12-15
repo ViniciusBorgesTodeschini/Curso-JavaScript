@@ -1,4 +1,4 @@
-function tabuad(){
+function tabuada(){
     let num = window.document.getElementById('txtn')
     let tab = document.getElementById('seltab')
 
@@ -6,5 +6,12 @@ function tabuad(){
         window.alert ('Por favor, digite um número!')
     } else {
         let n = Number(num.value)
+        let c = 1
+        while (c <= 10){
+            let item = document.createElement('option')
+            item.text = `${n} x ${c} = ${n*c}`
+            tab.appendChild(item)
+            c++
+        }
     }
 }
