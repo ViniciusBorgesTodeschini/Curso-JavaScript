@@ -1,5 +1,5 @@
 //Variavel recebemento parâmetros.
-let v = function(x) {
+let v = function(x = 0) {
     return x*2
 }
 
